@@ -1,0 +1,114 @@
+#findC {
+    min-height: 91vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-stretch: 100%;
+    /* position: absolute; */
+}
+
+#leftBloc {
+    /* Il faudrait un min-width */
+    background-color: #259ca8;
+    min-height: 91vh;
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#divLeftBloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#divLeftBlocF {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#rightBloc {
+    min-height: 91vh;
+    width: 80%;
+}
+
+.blocCar {
+    min-width: 80%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5vh;
+    flex-wrap: wrap;
+}
+
+.blocCar3 {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    max-height: 25%;
+    border: black 1px solid;
+    border-radius: 15%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.imgCar {
+    width: 450px;
+    height: 250px;
+}
+
+.btnWatchCar {
+    color: dodgerblue;
+    font-size: 40px;
+}
+
+
+.accordion {
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+
+.active, .accordion:hover {
+    background-color: #25848d;
+}
+  
+.panel {
+    /* background-color: #3ac9d6; */
+    padding: 0 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+    content: '\2228'; 
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2227"; 
+} 
+
+/* Responsive filters 720px */
+.search_input {
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.check {
+    margin: 5px;
+}

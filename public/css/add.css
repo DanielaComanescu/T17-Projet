@@ -1,0 +1,94 @@
+#pgAddCar {
+    min-height: 110vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-stretch: 100%;
+}
+
+#blockLeft {
+    background-color: #259ca8;
+    min-height: 91vh;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    /* align-items: center; */
+}
+
+.buttons {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+ }
+
+ .btn {
+    width: 190px;
+    height: 30px;
+    background-color:darkorange;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn a{
+    text-decoration: none; /* Supprimer le soulignage du lien */
+    color: white;
+}
+
+.btn:hover {
+    background-color: #a2a434;
+}
+
+
+#blockRight {
+    min-height: 91vh;
+    width: 80%;  
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+h2 {
+    color:#259ca8;
+    align-self: center; 
+}
+
+.formAdd {
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.columnOne, .columnTwo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#make, #model, #color {
+    width: 220px;
+}
+
+#price {
+    width: 240px;
+}
+
+#kilometers {
+    width: 200px;
+}
+
+#number_plate {
+    width: 130px;
+}
+
+.columnTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+

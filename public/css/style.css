@@ -1,0 +1,65 @@
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+body {
+  min-height: 92vh;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  min-height: 20px;
+  background-color: #259ca8;
+
+}
+
+nav {
+  height: 65px;
+}
+
+.logoM{
+  width: 15vh;
+  height: 3vh;
+  border-radius: 30px;
+  color: black;
+  background-color: white;
+}
+
+.parent {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .middle a {
+  margin: 0 10px;
+}
+
+nav a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: black;
+}

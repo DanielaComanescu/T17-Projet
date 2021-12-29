@@ -1,0 +1,68 @@
+.pgHome {
+    min-height: 100vh;
+    width: 100%;
+    
+}
+
+.fond {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://images.wsj.net/im-372674?width=1280&size=1.33333333");
+    background-repeat: no-repeat;
+    background-size: cover;  
+    filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+  -moz-filter: brightness(50%);
+  -o-filter: brightness(50%);
+  -ms-filter: brightness(50%);
+
+}
+
+.btn {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    transform: translate(-10%, -150%);
+    width: 360px;
+    height: 55px;
+    background-color:darkorange;
+    font-size: 32px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+  }
+
+.btn a{
+  text-decoration: none; /* Supprimer le soulignage du lien */
+  color: white;
+}
+
+.btn:hover {
+    background-color: #a2a434;
+}
+  
+
+.texte{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
+    filter: none;
+  }
+  
+  .texte2 {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    transform: translate(-30%, -160%);
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+  
+  }
+

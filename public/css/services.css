@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #259ca8;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 19px;
+}
+
+#achatEnLigne, #venteEnLigne {
+    width: 500px;
+    height: 300px;
+}
+
+#texteAchat {
+  width: 800px;
+}
+
+#symbol1, #symbol2, #symbol3 {
+    width: 70px;
+    height: 70px;
+    align-self:flex-end;
+}
+
+.threeColumns {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: 70px;
+    
+}
+
+/* mise en forme du tableau */
+#acheterChezAV, #vendreChezAV {
+    margin:70px;
+    
+}
+
+table {
+    table-layout: fixed;
+    width: 90%;
+    border-collapse: collapse;
+    
+}
+
+thead {
+    width: 30%;
+    background-color: #e495e4;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+
+td {
+    padding: 20px;
+    letter-spacing: 1px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #999;
+}
+  
+tbody tr:nth-child(even) {
+    background-color: #e495e4;
+}
+/* fin tableau */
+
+.btn {
+    width: 400px;
+    height: 50px;
+    background-color: #259ca8;;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.btn a{
+    text-decoration: none; /* Supprimer le soulignage du lien */
+}
+
+.btn:hover {
+    background-color: #34a46c;
+}
+
+.parentVente {
+    display: flex;
+    flex-direction: row;
+}
+
+#texteVente {
+    width: 800px;
+    margin: 30px;
+}
+
+
+

@@ -1,0 +1,41 @@
+.pgInscription {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-stretch: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#haveAccount {
+    align-self: flex-end;
+}
+
+a {
+    color: #259ca8; 
+    font-weight: bold;
+ }
+
+#name, #email, #password, #confirmPassword, #phone_number {
+    width: 400px;
+}
+
+.btn {
+    width: 190px;
+    height: 30px;
+    background-color:darkorange;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn a{
+    text-decoration: none; /* Supprimer le soulignage du lien */
+    color: white;
+}
+
+.btn:hover {
+    background-color: #a2a434;
+}

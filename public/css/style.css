@@ -5,27 +5,19 @@ main {
 }
 
 body {
-  min-height: 92vh;
+  min-height: 100vh; /*body prend toute la page */
   margin: 0;
   padding: 0;
+
 }
 
 header {
-  min-height: 20px;
   background-color: #259ca8;
-
+  height: 20%;
 }
 
 nav {
   height: 65px;
-}
-
-.logoM{
-  width: 15vh;
-  height: 3vh;
-  border-radius: 30px;
-  color: black;
-  background-color: white;
 }
 
 .parent {
@@ -34,6 +26,7 @@ nav {
   flex-direction: row;
   justify-content:space-between;
   align-items: center;
+
 }
 
 .middle {
@@ -43,7 +36,7 @@ nav {
   justify-content: space-between;
  }
 
- .middle a {
+.middle a {
   margin: 0 10px;
 }
 
@@ -56,10 +49,125 @@ nav a {
   font-weight: bold;
 }
 
-a:hover {
-    text-decoration: underline;
+#fond {
+  /* Fixe l'image en haut à gauche de la page */
+  position: fixed; 
+  top: 8%; 
+  bottom: 90%;
+  /* Préserve le ratio de l'image */
+  min-width: 100%;
+  min-height: 80%;
+  height: 250px;
+  filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
 }
 
-a:active {
-    color: black;
+.texte{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 50px;
+  font-weight: bold;
+
 }
+
+.texte2 {
+  position: absolute;
+  top: 45%;
+  left: 40%;
+  transform: translate(-30%, -160%);
+  color: white;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+#search {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  transform: translate(-20%, -150%);
+  font-size: 50px;
+  border-radius: 35px;
+  background-color: #259ca8;
+}
+
+/* menu deroulant (profil et se deconnecter) */
+
+.monCompte{
+  color: white;
+
+}
+
+#menu-button {
+  position:absolute;
+  top:0;
+  right:0;
+  width:50px;
+  height:75px;
+  overflow:hidden;
+  background:#259ca8;  
+  color: #fff;
+  text-align:center;
+  cursor:pointer;
+  font-size:50px;
+  transition:all .5s;
+}
+
+#menu-button::after{
+  content:'×';
+}
+
+#menu-button.close{
+  color:#fff;
+  background: #259ca8;
+}
+
+#menu-button.close::after{
+  content:'≡';
+}
+
+#two{
+  transform:translateY(-16px);
+}
+
+#two.show-menu{
+  transition:transform .5s;
+  position:absolute;
+  width:100%;
+  max-width:400px;
+  transform:translateY(-300px);
+
+}
+
+.connexion {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connectedUser {
+  width: 200px;
+}
+
+ul,li{
+  display:block;
+}
+
+li{
+  height:50px;
+  line-height:50px;
+  padding:0 12px;
+  border-bottom:1px solid #777;
+  background: #259ca8;
+}
+
+/* fin menu deroulant (profil et se deconnecter) */

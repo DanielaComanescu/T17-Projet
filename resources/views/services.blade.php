@@ -97,7 +97,7 @@
 </table>
 <br>
 <br>
-<div class="btn"><a href="/findCar"> Trouvez votre voiture maintenant </a></div>
+<div class="btn"><a href="/search"> Trouvez votre voiture maintenant </a></div>
 <br>
 <br>
 
@@ -152,7 +152,13 @@
     </tbody>
 </table>
 <br>
-<div class="btn"><a href="/connexion"> Vendez votre voiture maintenant </a></div>
+<div class="btn">
+    @if (Auth::check())
+        <a href="/addCar"> Vendez votre voiture </a>
+    @else
+        <a href="/connexion"> Vendez votre voiture maintenant </a>
+    @endif
+</div>
 <br>
 <br>
 

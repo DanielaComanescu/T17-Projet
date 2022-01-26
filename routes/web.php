@@ -8,7 +8,6 @@ use App\Http\Controllers\ConnexionController;
 
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,19 +31,23 @@ Route::get('/faq', [NavController::class, 'faq']);
 
 Route::get('/services', [NavController::class, 'services']);
 
-Route::get('/profile', [ConnexionController::class, 'profile'])->middleware('auth');
-
-
-
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->middleware('guest')->name('login');
 
 Route::post('/connexion', [ConnexionController::class, 'authenticate'])->middleware('guest');
+
+Route::get('/connectedRoute', [ConnexionController::class, 'connected'])->middleware('auth');
 
 Route::get('/inscription', [ConnexionController::class, 'inscription'])->middleware('guest');
 
 Route::post('/inscription', [ConnexionController::class, 'addUser'])->middleware('guest');
 
 Route::get('/logout', [ConnexionController::class, 'logout'])->middleware('auth');
+
+Route::get('/updateUser/{id}', [ConnexionController::class, 'updateData'])->middleware('auth');
+
+Route::post('/updateUser/{id}', [ConnexionController::class, 'enregistrer'])->middleware('auth');
+
+Route::post('/deleteUser/{id}', [ConnexionController::class, 'supprimer'])->middleware('auth');
 
 Route::get('/addCar', [CarController::class, 'create'])->middleware('auth');
 Route::post('/addCar', [CarController::class, 'store'])->middleware('auth');
@@ -64,11 +67,3 @@ Route::get('/reviewCars', [CarController::class, 'reviewCar'])->middleware('admi
 
 Route::get('/reviewCommands', [CommandController::class, 'reviewCommand'])->middleware('admin');
 
-
-
-// Pas mis en place parce qu'il faut faire la Policy
-// Route::delete('/deleteUser/{id}', [UserController::class, 'supprimer'])->middleware('auth');
-
-// Route::get('/updateUser/{id}', [Usercontroller::class, 'updateData'])->middleware('auth');
-
-// Route::put('/updateUser/{id}', [UserController::class, 'enregistrer'])->middleware('auth');

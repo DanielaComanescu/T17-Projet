@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/@yield('css').css">
+        <link rel="stylesheet" href="/CSS/style.css">
+        <link rel="stylesheet" href="/CSS/@yield('css').css">
 
         <title>@yield('title') </title>
     </head>
@@ -24,7 +24,14 @@
 
                 <div class="connexion">
                     @if (Auth::check()) 
-                    <a href="/profile"> Profil </a>
+                    <div class="connectedUser"><h2 class="monCompte">Mon compte</h2><div id="menu-button" class="close"></div></div>
+                    
+                    <nav id="two" class="show-menu">
+                        <ul>
+                            <li><a href="/connectedRoute"> Mon profil </a></li>
+                            <li><a href="/logout"> Se deconnecter </a></li>
+                        </ul>
+                    </nav>
                     @else
                     <a href="/connexion"> Se connecter</a> 
                     @endif
@@ -35,7 +42,17 @@
         <main>
             @yield('content')
         </main>
+
         <script>
+            var menuButton = document.querySelector('#menu-button');
+            var menu = document.querySelector('#two');
+            // show or hide
+            menuButton.addEventListener('click',function(){
+                menu.classList.toggle('show-menu');
+                menuButton.classList.toggle('close');
+            });
         </script>
+
     </body>
 </html>
+

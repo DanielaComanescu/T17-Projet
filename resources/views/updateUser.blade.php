@@ -10,12 +10,10 @@
 
     <div id="blockRight">
 
-
         <h2> Vous pouvez modifier vos informations ici </h2>
 
             <form action="/updateUser/{{ auth()->user()->id }}" method="POST">
             @csrf
-            @method('PUT')
                 <div class="name">
                     <label for="name" id="name"> Modifier votre nom: </label>
                     <input type="text" id="name" name="name" value="{{ auth()->user()->name }}">
@@ -37,11 +35,11 @@
                 <p> Vous voulez supprimer votre compte?</p>
                     <div class="btn">
                         <form action="/deleteUser/{{ auth()->user()->id }}" method="POST">
-                        @
-                        @method('DELETE')
+                        @csrf
                             <button type="submit" class="btn btn-primary"> Supprimer compte</button>
                         </form>
                     </div>
             </div>
 
 @endsection
+

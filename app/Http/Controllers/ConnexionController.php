@@ -21,7 +21,7 @@ class ConnexionController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/profile')->with('status', 'Bonjour');
+            return redirect()->intended('/connectedRoute')->with('status', 'Bonjour');
         }
 
         return back()->withErrors([
@@ -60,16 +60,42 @@ class ConnexionController extends Controller
 
         Auth::login($user);
 
-        return redirect('/profile')->with('status', 'Bienvenue');
+        return redirect('/connectedRoute')->with('status', 'Bienvenue');
 
+    }
+
+    public function updateData($id) {
+        $user = User:: findOrFail($id);
+
+        return view('updateUser', ['user' => $user]);
+
+    }
+
+    public function enregistrer(Request $request) {
+        $user = User::find($request->id);
+
+        $user->name = $request->name;
+        $user->phone_number = $request->phone_number;
+
+        $user->save();
+
+        return redirect('/connectedRoute')->with('status', 'Données enregistrées');;
+    }
+
+    public function supprimer(Request $request) {
+        $user = User::find($request->id);
+
+        $user->delete();
+
+        return redirect ('/');
     }
 
     public function connexion() {
         return view('connexion');
     }
 
-    public function profile() {
-        return view('profile');
+    public function connected() {
+        return view('connected');
     }
 
     public function inscription() {
